@@ -1,0 +1,76 @@
+:root{
+    --main-color:#14573F;
+    --second-color:#E5A908;
+}
+body{
+    background:var(--main-color);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer
+title{
+     font-family: "Edu QLD Hand", cursive;
+}
+#Register .container .head img{
+    width: 30%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+#Register .container .body form{
+    width: 70%;
+    margin: auto;
+    background: rgba(255, 255,255, .1);
+    backdrop-filter: blur(6px);
+    border-radius: 28px;
+    box-shadow: 0 8px 24px rgba(20, 87, 63, .2);
+    overflow: hidden;
+    position: relative;
+}
+#Register .container .body form button{
+    background-color: var(--second-color);
+    color: #fff;
+}
+#Search{
+    width: 300px;
+    margin: auto
+}
+#Search div{
+    text-align: center;
+}
+#Data table.table{
+    min-width: max-content;
+}
+.status-select { 
+    min-width: 120px; 
+    font-weight: 600; 
+    border: 0; }
+.status-pending { 
+    background-color: #ffe9a8; 
+    color: #6b4a00; 
+}
+.status-confirmed { 
+    background-color: #c8ecd6; 
+    color: #11582f; 
+}
+.status-cancelled { 
+    background-color: #f6cfca; 
+    color: #8e1f14; 
+}
+#filters .btn.active {
+    background-color: #e6a90b;
+    border-color: #e6a90b;
+    color: #1d2b25;
+    font-weight: 600;
+}
+footer{
+    background-color: #0D3B2B;
+    color: #fff;
+    text-shadow: 2px 2px 4px #fff;
+    text-align: center;
+    padding: 15px;
+}

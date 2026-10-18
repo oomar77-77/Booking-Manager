@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="restaurant">
+        <meta name="author" content="Omar">
+        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="stylesheet" href="./css/booking.css">
+        <title>Booking Manager</title>
+    </head>
+    <body>
+        <section id="Register">
+            <div class="container">
+                <div class="head mb-3 text-center">
+                    <img src="./images/logo.jpeg" alt="logo">
+                </div>
+                <h1 class="text-light text-center mb-4">Sha8af Bet-ak
+                    El-tany</h1>
+                <div class="body">
+                    <form class="p-4" data-type="add" novalidate>
+
+                        <i class="fa-solid fa-rotate-left position-absolute"
+                            onclick="cancelEdit()"></i>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i
+                                    class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control"
+                                name="ClientName"
+                                placeholder="Client Name *"
+                                onblur="checkInput(this)" data-valid="false">
+                        </div>
+                        <p class="alert d-none alert-danger"
+                            data-error-name="ClientName" role="alert"></p>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i
+                                    class="fa-solid fa-mobile-button"></i></span>
+                            <input type="text" class="form-control" name="phone"
+                                placeholder="Phone *" onblur="checkInput(this)"
+                                data-valid="false" autocomplete="off">
+                        </div>
+                        <p class="alert d-none alert-danger"
+                            data-error-name="phone" role="alert"></p>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i
+                                    class="fa-solid fa-calendar"></i></span>
+                            <input type="date" class="form-control" name="Date"
+                                onblur="checkInput(this)" data-valid="false">
+                        </div>
+                        <p class="alert d-none alert-danger"
+                            data-error-name="Date" role="alert"></p>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i
+                                    class="fa-solid fa-clock"></i></span>
+                            <input type="time" class="form-control" name="time"
+                                onblur="checkInput(this)" data-valid="false">
+                        </div>
+                        <p class="alert d-none alert-danger"
+                            data-error-name="time" role="alert"></p>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i
+                                    class="fa-solid fa-hashtag"></i></span>
+                            <input type="number" class="form-control"
+                                name="guests"
+                                placeholder="Number Of People *"
+                                onblur="checkInput(this)"
+                                data-valid="false" min="1" max="10">
+                        </div>
+                        <p class="alert d-none alert-danger"
+                            data-error-name="guests" role="alert"></p>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i
+                                    class="fa-solid fa-circle-info"></i></span>
+                            <select class="form-select" name="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Confirmed">Confirmed</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                        </div>
+
+                        <button
+                            class="btn btn-success text-center w-100">Add</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="Search" class="my-5">
+            <div class="container">
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i
+                            class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control" name="search"
+                        placeholder="Search by name or phone" id="searchInput">
+                </div>
+                <div id="filters" class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-outline-light active"
+                        data-status="All">All (<span
+                            data-count="All">0</span>)</button>
+                    <button type="button" class="btn btn-outline-light"
+                        data-status="Pending">Pending (<span
+                            data-count="Pending">0</span>)</button>
+                    <button type="button" class="btn btn-outline-light"
+                        data-status="Confirmed">Confirmed (<span
+                            data-count="Confirmed">0</span>)</button>
+                    <button type="button" class="btn btn-outline-light"
+                        data-status="Cancelled">Cancelled (<span
+                            data-count="Cancelled">0</span>)</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="Data" class="w-75 mx-auto mb-5">
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Client Name</th>
+                            <th>Phone</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Guests</th>
+                            <th>Status</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </section>
+        <footer>© 2026 omarEid, Ltd. | All Rights Reserved .</footer>
+        <script src="./js/bootstrap.js"></script>
+        <script src="./js/functions.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

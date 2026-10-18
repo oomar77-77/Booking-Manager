@@ -1,0 +1,36 @@
+/* 350 */
+@media (max-width: 1300px) {
+    #Register .container .body form{
+    width: 280px;
+    margin: auto;
+}
+#Data table.table{
+    min-width: max-content ;
+    margin: auto;
+}
+}
+/* 450 */
+@media (min-width: 371px) and (max-width: 1300px) {}
+/* 650 */
+@media (min-width: 577px) and (max-width: 1300px) {
+     #Register .container .body form{
+    width: 350px;
+    margin: auto;
+}
+}
+/* 850 */
+@media (min-width: 769px) and (max-width: 1300px) {
+     #Register .container .body form{
+    width: 400px;
+    margin: auto;
+}
+}
+/* 1050 */
+@media (min-width: 992px) and (max-width: 1300px) {
+    #Register .container .body form{
+    width:500px;
+    margin: auto;
+}
+}
+/* 1250 */
+@media (min-width: 1181px) and (max-width: 1300px) {}
