@@ -92,8 +92,6 @@ function resetForm() {
 
     let formBtn = form.querySelector("button");
     formBtn.textContent = "Add";
-    formBtn.classList.add("btn-success");
-    formBtn.classList.remove("btn-info", "text-light");
 
     form.querySelector(".fa-rotate-left").classList.remove("show");
     form.removeAttribute("data-client-id");
